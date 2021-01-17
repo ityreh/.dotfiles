@@ -6,7 +6,7 @@ Dotfiles for my personalized system setup. This project is highly inspired by [M
 - Shell (Zsh)
 - [Window Manager (i3)](#window-manager-(i3))
 - [Terminal Multiplexer (tmux)](#terminal-multiplexer-(tmux))
-- Editor (Neovim)
+- [Editor (Neovim)](#editor-(neovim))
 
 ## [Window Manager (i3)](https://i3wm.org/docs/userguide.html)
 
@@ -38,3 +38,17 @@ tmux/tmux.conf -> ~/.tmux.conf
 ```
 
 Sessions configuration for tmux can be done with [tmuxp](https://tmuxp.git-pull.com/) writing your session information to a yaml file in `~/.tmuxp/`.
+
+## [Editor (Neovim)](https://neovim.io/doc/)
+
+Install neovim.
+
+```
+pacman -S neovim
+```
+
+Configuration of neovim.
+
+```
+nvim/init.vim -> ~/.config/nvim/init.vim
+```
