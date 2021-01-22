@@ -4,3 +4,4 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 
 set clipboard+=unnamedplus
+set hidden
