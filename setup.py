@@ -19,6 +19,18 @@ def cTo(target):
     return join(home_dir, target)
 
 
+def setup_feh():
+    """setup feh"""
+    copy(cFrom("feh/fehbg"), cTo(".fehbg"))
+    print("Setup feh done")
+
+
+def setup_X11():
+    """setup X11"""
+    copy(cFrom("X11/xinitrc"), cTo(".xinitrc"))
+    print("Setup X11 done")
+
+
 def setup_i3():
     """setup window manager i3"""
     copy(cFrom("i3/i3.conf"), cTo(".config/i3/config"))
@@ -54,6 +66,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.all:
+        setup_feh()
+        setup_X11()
         setup_i3()
         setup_tmux()
         setup_zsh()

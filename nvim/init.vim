@@ -24,4 +24,10 @@ call plug#end()
 
 " coc-extensions
 " (https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions)
-let g:coc_global_extensions = ["coc-json", "coc-tsserver"]
+let g:coc_global_extensions = [
+	\ "coc-html",
+	\ "coc-css",
+	\ "coc-json",
+	\ "coc-yaml",
+	\ "coc-tsserver",
+\]
