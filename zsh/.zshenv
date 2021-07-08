@@ -1,13 +1,18 @@
 #!/bin/zsh
 
-#############
-# archlinux #
-#############
+##########
+# system #
+##########
 
-#export XDG_CONFIG_HOME="$HOME/.config"
-#export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
-#export XDG_CACHE_HOME="$XDG_CONFIG_HOME/chaceh"
+# For dotfiles
+export DOTFILES="$HOME/dotfiles"
+export XDG_CONFIG_HOME="$HOME/.config"
+# For specific data
+export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
+# For cached files
+export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
 
+# Path
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 
@@ -17,7 +22,7 @@ export PATH=$HOME/.local/bin:$PATH
 
 # zsh
 
-#export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="~/.zhistory"
 export HISTSIZE=10000
 export SAVEHIST=10000
@@ -49,7 +54,7 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 
 #############
-# languages # 
+# languages #
 #############
 
 # java

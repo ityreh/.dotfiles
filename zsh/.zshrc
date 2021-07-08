@@ -1,49 +1,65 @@
 #!/bin/zsh
 
-# +------+
-# | ruby |
-# +------+
+#############
+# languages #
+#############
 
+# ruby
 eval "$(rbenv init -)"
 
-# +------------+
-# | frameworks |
-# +------------+
+##############
+# frameworks #
+##############
 
 source $ZSH/oh-my-zsh.sh
 
-# +---------+
-# | aliases |
-# +---------+
+###########
+# aliases #
+###########
 
-source $HOME/aliases
+source $DOTFILES/zsh/aliases
 
-# +------------+
-# | completion |
-# +------------+
+##############
+# completion #
+##############
 
 autoload -Uz compinit
 compinit
 _comp_options+=(globdots)
+source ~/dotfiles/zsh/external/completion.zsh
+fpath=($ZDOTDIR/external $fpath)
 
-# +------------+
-# | navigation |
-# +------------+
+##############
+# navigation #
+##############
 
 setopt AUTO_PUSHD
 setopt PUSHD_IGNORE_DUPS
 setopt PUSHD_SILENT
 
-# +--------------+
-# | fuzzy search |
-# +--------------+
+source ~/dotfiles/zsh/external/bd.zsh
 
-source /usr/share/fzf/completion.zsh
-source /usr/share/fzf/key-bindings.zsh
+##################
+# custom scripts #
+##################
 
-# +---------+
-# | vi mode |
-# +---------+
+source $DOTFILES/zsh/scripts.zsh
+
+################
+# fuzzy search #
+################
+
+if [ $(command -v "fzf") ]; then
+    source /usr/share/fzf/completion.zsh
+    source /usr/share/fzf/key-bindings.zsh
+fi
+
+export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+###########
+# vi mode #
+###########
 
 bindkey -v
 export KEYTIMEOUT=1
@@ -58,9 +74,9 @@ autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
 
-# +--------+
-# | cursor |
-# +--------+
+##########
+# cursor #
+##########
 
 cursor_mode() {
     # See https://ttssh2.osdn.jp/manual/4/en/usage/tips/vim.html for cursor shapes
@@ -89,10 +105,16 @@ cursor_mode() {
 
 cursor_mode
 
-# +----------------+
-# | start X Server |
-# +----------------+
+##################
+# start X Server #
+##################
 
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-  exec startx
+    exec startx
 fi
+
+#######################
+# syntax highlighting #
+#######################
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

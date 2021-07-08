@@ -7,6 +7,9 @@ noremap <Right> <Nop>
 set clipboard+=unnamedplus
 set hidden
 
+" no swap file
+set noswapfile
+
 " show line numbers
 set number
 
@@ -14,6 +17,15 @@ set number
 set undofile
 set undodir=~/.config/nvim/undo
 set undolevels=10000
+set undoreload=10000
+
+" use 4 spaces instead of tab
+" copy indent from current line when starting a new line
+set autoindent
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 
 " Plugins (vim-plug: sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim')
 call plug#begin('~/.config/nvim/plugged')
