@@ -50,7 +50,7 @@ set_from_resource $white2 color15 #ffffff
 set $mod Mod4
 
 # Font
-font pango:JetBrains Mono 11
+font pango:JetBrainsMono Nerd Font Mono 11
 
 # wallpaper
 exec --no-startup-id $HOME/.fehbg

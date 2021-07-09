@@ -12,7 +12,7 @@
 *.color9:       #d75f5f
 
 ! green 108
-*.color2:       #87AF87 
+*.color2:       #87AF87
 *.color10:      #87AF87
 
 ! yellow 221
@@ -39,7 +39,7 @@
 !! rxvt-unicode !!
 !!!!!!!!!!!!!!!!!!
 
-URxvt*font: xft:Inconsolata Nerd Font:style=Medium:size=14:pixelsize=16:antialias=true
+URxvt*font: xft:JetBrainsMono Nerd Font Mono:style=Medium:size=14:pixelsize=16:antialias=true
 
 ! URxvt*intensityStyles: true
 ! URxvt*linespace: 0

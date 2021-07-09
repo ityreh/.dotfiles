@@ -38,3 +38,9 @@ ln -sf $DOTFILES/zsh/external $XDG_CONFIG_HOME/zsh/external
 mkdir -p $XDG_CONFIG_HOME/nvim
 mkdir -p $XDG_CONFIG_HOME/nvim/undo
 ln -sf $DOTFILES/nvim/init.vim $XDG_CONFIG_HOME/nvim
+
+#########
+# Fonts #
+#########
+mkdir -p $XDG_DATA_HOME
+cp -rf $DOTFILES/fonts $XDG_DATA_HOME
