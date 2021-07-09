@@ -26,7 +26,7 @@ source $DOTFILES/zsh/aliases
 autoload -Uz compinit
 compinit
 _comp_options+=(globdots)
-source ~/dotfiles/zsh/external/completion.zsh
+source ~/.dotfiles/zsh/external/completion.zsh
 fpath=($ZDOTDIR/external $fpath)
 
 ##############
@@ -37,7 +37,7 @@ setopt AUTO_PUSHD
 setopt PUSHD_IGNORE_DUPS
 setopt PUSHD_SILENT
 
-source ~/dotfiles/zsh/external/bd.zsh
+source ~/.dotfiles/zsh/external/bd.zsh
 
 ##################
 # custom scripts #

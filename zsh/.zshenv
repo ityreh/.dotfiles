@@ -5,7 +5,7 @@
 ##########
 
 # For dotfiles
-export DOTFILES="$HOME/dotfiles"
+export DOTFILES="$HOME/.dotfiles"
 export XDG_CONFIG_HOME="$HOME/.config"
 # For specific data
 export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
