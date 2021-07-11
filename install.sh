@@ -62,3 +62,13 @@ ln -sf $DOTFILES/nvim/autoload/plug.vim $XDG_CONFIG_HOME/nvim/autoload/plug.vim
 # Install (or update) all the plugins
 nvim --noplugin +PlugUpdate +qa
 
+########
+# tmux #
+########
+mkdir -p $XDG_CONFIG_HOME/tmux
+ln -sf $DOTFILES/tmux/tmux.conf $XDG_CONFIG_HOME/tmux/tmux.conf
+
+# install tmux plugin manager
+[ ! -d $XDG_CONFIG_HOME/tmux/plugins/tpm ] \
+    && git clone https://github.com/tmux-plugins/tpm \
+    $XDG_CONFIG_HOME/tmux/plugins/tpm
