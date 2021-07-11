@@ -30,11 +30,16 @@ set shiftwidth=4
 " Plugins (vim-plug: sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim')
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'chrisbra/csv.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
-" coc-extensions
+"csv plugin
+autocmd BufRead,BufWritePost *.csv :%ArrangeColumn!
+autocmd BufWritePre *.csv :%UnArrangeColumn
+
+" coc plugin extensions
 " (https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions)
 let g:coc_global_extensions = [
 	\ "coc-html",
