@@ -44,3 +44,9 @@ ln -sf $DOTFILES/nvim/init.vim $XDG_CONFIG_HOME/nvim
 #########
 mkdir -p $XDG_DATA_HOME
 cp -rf $DOTFILES/fonts $XDG_DATA_HOME
+
+#########
+# dunst #
+#########
+mkdir -p $XDG_CONFIG_HOME/dunst
+ln -sf $DOTFILES/dunst/dunstrc $XDG_CONFIG_HOME/dunst/dunstrc

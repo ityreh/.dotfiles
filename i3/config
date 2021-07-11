@@ -58,6 +58,9 @@ exec --no-startup-id $HOME/.fehbg
 # Lockscreen
 set $i3lockwall sh ~/.config/i3/scripts/lock.sh
 
+# Nofifications
+exec --no-startup-id dunst
+
 ### Multimedia Keys ###
 
 # Pulse Audio
