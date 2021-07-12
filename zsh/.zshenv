@@ -27,11 +27,6 @@ export HISTFILE="~/.zhistory"
 export HISTSIZE=10000
 export SAVEHIST=10000
 
-# oh-my-zsh
-
-export ZSH="/home/main/.oh-my-zsh"
-export ZSH_THEME="robbyrussell"
-
 ##################
 # window manager #
 ##################

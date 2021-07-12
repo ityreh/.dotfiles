@@ -1,17 +1,18 @@
 #!/bin/zsh
 
+##########
+# prompt #
+##########
+
+fpath=($DOTFILES/zsh $fpath)
+autoload -Uz prompt_purification_setup && prompt_purification_setup
+
 #############
 # languages #
 #############
 
 # ruby
 eval "$(rbenv init -)"
-
-##############
-# frameworks #
-##############
-
-source $ZSH/oh-my-zsh.sh
 
 ###########
 # aliases #
