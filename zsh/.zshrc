@@ -11,6 +11,10 @@ autoload -Uz prompt_purification_setup && prompt_purification_setup
 # languages #
 #############
 
+# python
+export WORKON_HOME=~/.virtualenvs
+source /usr/bin/virtualenvwrapper.sh
+
 # ruby
 eval "$(rbenv init -)"
 
