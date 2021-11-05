@@ -18,6 +18,12 @@ source /usr/bin/virtualenvwrapper.sh
 # ruby
 eval "$(rbenv init -)"
 
+############
+# programs #
+############
+
+export FREEPLANE_JAVA_HOME=/usr/lib/jvm/java-11-openjdk
+
 ###########
 # aliases #
 ###########
