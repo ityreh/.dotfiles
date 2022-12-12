@@ -11,6 +11,11 @@ autoload -Uz prompt_purification_setup && prompt_purification_setup
 # languages #
 #############
 
+# typescript
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
 # python
 export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
