@@ -35,8 +35,9 @@ ln -sf $DOTFILES/zsh/external $XDG_CONFIG_HOME/zsh/external
 #########
 # Fonts #
 #########
-mkdir -p $XDG_DATA_HOME
-cp -rf $DOTFILES/fonts $XDG_DATA_HOME
+#TODO: delete and set fonts for wayland
+#mkdir -p $XDG_DATA_HOME
+#cp -rf $DOTFILES/fonts $XDG_DATA_HOME
 
 #########
 # dunst #
